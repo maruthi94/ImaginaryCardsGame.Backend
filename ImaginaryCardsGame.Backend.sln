@@ -5,6 +5,12 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImaginaryCardsGame.Backend", "ImaginaryCardsGame.Backend\ImaginaryCardsGame.Backend.csproj", "{8E62D58F-3D55-4780-B591-90AD05DB093C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{6A8893A0-55F6-4F0A-8B43-67D6C2DBE4D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7F2EF828-7B73-4DBF-8BBF-F99FE3962FF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImaginaryCardsGame.Backend.iTest", "ImaginaryCardsGame.Backend.iTest\ImaginaryCardsGame.Backend.iTest.csproj", "{4509459D-72D9-4653-85C1-BA3E77F26965}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,17 @@ Global
 		{8E62D58F-3D55-4780-B591-90AD05DB093C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E62D58F-3D55-4780-B591-90AD05DB093C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E62D58F-3D55-4780-B591-90AD05DB093C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4509459D-72D9-4653-85C1-BA3E77F26965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4509459D-72D9-4653-85C1-BA3E77F26965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4509459D-72D9-4653-85C1-BA3E77F26965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4509459D-72D9-4653-85C1-BA3E77F26965}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8E62D58F-3D55-4780-B591-90AD05DB093C} = {6A8893A0-55F6-4F0A-8B43-67D6C2DBE4D2}
+		{4509459D-72D9-4653-85C1-BA3E77F26965} = {7F2EF828-7B73-4DBF-8BBF-F99FE3962FF1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD114751-5DB0-42CA-9CE6-F4D7D522F7AE}

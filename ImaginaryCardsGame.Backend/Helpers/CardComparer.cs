@@ -4,6 +4,13 @@
     {
         private const int DEFAULT_PRIORITY = 100;
         private readonly HashSet<string> specialCards = new() { "4T", "2T", "ST", "PT", "RT" };
+        private readonly Dictionary<string, int> nonNumericCardsSortPeriority = new()
+        {
+            { "J", 11 },
+            { "Q", 12 },
+            { "K", 13 },
+            { "A", 14 }
+        };
 
         private readonly Dictionary<string, int> cardsPriority = new()
         {
@@ -12,17 +19,16 @@
             { "ST", 3 },
             { "PT", 4 },
             { "RT", 5 },
-            { "T", 6 },
-            { "D", 8 },
-            { "S", 10 },
-            { "C", 12 },
-            { "H", 14 }
+            { "D", 10 },
+            { "S", 30 },
+            { "C", 50 },
+            { "H", 70 }
         };
 
         public int Compare(string cardA, string cardB)
         {
-            var cardAValue = GetPriority(cardA);
-            var cardBValue = GetPriority(cardB);
+            var cardAValue = GetPriority(cardA.Trim());
+            var cardBValue = GetPriority(cardB.Trim());
             return cardAValue.CompareTo(cardBValue);
         }
 
@@ -38,7 +44,7 @@
                 var cardValue = card[0..^1];
                 var priority = cardsPriority.GetValueOrDefault(cardType.ToString(), DEFAULT_PRIORITY);
 
-                return int.TryParse(cardValue,out int _) ? priority : priority+1;
+                return int.TryParse(cardValue,out int value) ? priority+value : priority + nonNumericCardsSortPeriority.GetValueOrDefault(cardValue, DEFAULT_PRIORITY);
             }
         }
     }
