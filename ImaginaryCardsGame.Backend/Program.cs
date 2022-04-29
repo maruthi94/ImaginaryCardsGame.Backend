@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", builder 
-                        => builder.WithOrigins("https://*.azurewebsites.net", "http://localhost:4200")
+                        => builder.WithOrigins("https://*.azurewebsites.net", "https://*.azurestaticapps.net", "http://localhost:4200")
                         .SetIsOriginAllowedToAllowWildcardSubdomains()
                         .AllowCredentials()
                         .AllowAnyHeader()
