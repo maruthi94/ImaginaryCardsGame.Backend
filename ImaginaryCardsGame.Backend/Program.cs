@@ -1,6 +1,5 @@
 using ImaginaryCardsGame.Backend.Services;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Filters;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +12,7 @@ builder.Services.AddControllers();
 //Add Cors Policy
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("CorsPolicy", builder 
+    options.AddPolicy("CorsPolicy", builder
                         => builder.WithOrigins("https://*.azurewebsites.net", "https://*.azurestaticapps.net", "http://localhost:4200")
                         .SetIsOriginAllowedToAllowWildcardSubdomains()
                         .AllowCredentials()
